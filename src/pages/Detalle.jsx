@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router";
-import { addProduct } from "../actions/cart";
+
 import Navbar from "../components/Navbar";
+import { addProduct } from "../redux/cartRedux";
 
 import { publicRequest } from "../requestMethods";
 

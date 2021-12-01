@@ -6,20 +6,22 @@ import { Badge } from "@material-ui/core";
 import { ShoppingCartOutlined } from "@material-ui/icons";
 
 import {useDispatch, useSelector} from 'react-redux';
-import { closeHambugerMenu, openHambugerMenu } from "../actions/ui";
+import { closeHambugerMenu, openHambugerMenu } from "../redux/uiRedux";
+
 
 const Navbar = () => {
   
-  const {hambugerMenu} = useSelector(state => state.ui)
-  const cart = useSelector(state => state.cart)
-  const {uid} = useSelector(state => state.auth)
+   const {hambugerMenu} = useSelector(state => state.ui)
+  const {quantity} = useSelector(state => state.cart)
+  //const {uid} = useSelector(state => state.auth)
   
   const dispatch = useDispatch()
   
   const handleOpenMenu = () => dispatch(openHambugerMenu());
-  const handleCloseMenu = () => dispatch(closeHambugerMenu());
+  const handleCloseMenu = () => dispatch(closeHambugerMenu()); 
   
-
+  
+  const uid = null;
   
   
   
@@ -81,7 +83,7 @@ const Navbar = () => {
           
           <Link to="/carrito">
             <span>
-              <Badge badgeContent={cart.quantity} color="secondary">
+              <Badge badgeContent={quantity} color="secondary">
                 <ShoppingCartOutlined className="nav__icon-carrito"/>
               </Badge>
             </span>

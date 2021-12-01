@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+
 import {
     BrowserRouter,
     Routes,
     Route,
   } from 'react-router-dom';
-import { startChecking } from "../actions/auth";
+
 
 import Carrito from "../pages/Carrito";
 import Detalle from "../pages/Detalle";
 import EnConstruccion from "../pages/EnConstruccion";
 import Home from "../pages/Home";
-import Loading from "../pages/Loading";
+
 import { Login } from "../pages/Login";
 import MiCuenta from "../pages/MiCuenta";
 import ProductosLista from "../pages/ProductosLista";
@@ -23,18 +23,7 @@ import { PublicRoute } from "./PublicRoute";
 
 const AppRouter = () => {
   
-  const dispatch = useDispatch();
-  const {checking} = useSelector(state => state.auth);
-
-  useEffect(() => {
-    dispatch(startChecking())
-  }, [dispatch]);
-
   
-  
-  if (checking){
-    return <Loading />
-  }
   
   return (
     <BrowserRouter>
