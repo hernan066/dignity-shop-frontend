@@ -37,7 +37,17 @@ const Detalle = () => {
 
   const handleClick = ()=>{
     //update cart
-    dispatch(addProduct(product, product.price));
+    //dispatch(addProduct([{product}, product.price]));
+
+    /* import { v4 as uuidv4 } from 'uuid';
+
+    uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed' */
+    
+    
+    dispatch(addProduct({
+      product: product,
+      price: product.price
+    }));
   }
   
   

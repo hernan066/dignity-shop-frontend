@@ -1,7 +1,21 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { deleteProduct } from '../../redux/cartRedux';
 
 const CarritoProducto = ({item}) => {
-    return (
+    
+  const dispatch = useDispatch();
+  
+  const handleDelete = () => {
+    console.log('Eliminando', item._id, item.price);
+    dispatch(deleteProduct({
+      id: item._id,
+      price: item.price
+    }));
+  }
+
+  
+  return (
         <div className="carrito__producto">
                 <div className="carrito__img">
                   <img src={item.img} alt={item.desc} />
@@ -22,7 +36,7 @@ const CarritoProducto = ({item}) => {
                   </div>
                   <div className="carrito__col">
                     <h3>Borrar</h3>
-                    <i className="far fa-times-circle"></i>
+                    <i className="far fa-times-circle" onClick={handleDelete}></i>
                   </div>
                 </div>
               </div>
