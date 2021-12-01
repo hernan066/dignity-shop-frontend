@@ -1,0 +1,102 @@
+.detalle__main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+    padding: 80px 5%;
+    
+}
+.detalle__img{
+    
+    width: 600px;
+    min-width: 350px;
+   
+}
+.detalle__info{
+    
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+   
+   
+}
+.detalle__info h1{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+
+
+.detalle__talle{
+    display: flex;
+    
+    
+}
+
+.detalle__info span{
+    border: 1px solid #ccc;
+    padding: 2px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.detalle__info button{
+    color: white;
+    letter-spacing: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+    height: 40px;
+    background-color: $rosa4;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    &:hover{
+        background-color: darken($color: $rosa4, $amount: 10);
+    }
+
+}
+
+
+
+.detalle__img img{
+   
+    width: 100%;
+}
+.detalle__review{
+    display: flex;
+    color: $rosa4;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc ;
+    padding: 10px 0px;
+}
+.detalle__review p{
+    margin-left: 10px;
+}
+.detalle__infos{
+    padding: 10px 0px;
+}
+.detalle__infos h3{
+    //text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 550px){
+    .detalle__info{
+        padding: 50px 5%;
+    }
+} 
+
+
+@media (max-width: 390px){
+    .detalle__main{
+        padding: 80px 0%;
+    }
+}
+ 

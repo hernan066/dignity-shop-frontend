@@ -1,0 +1,41 @@
+.prodSlider__main {
+  text-align: center;
+  margin-top: 40px;
+  padding: 0px 5%;
+}
+.prodSlider__main h2 {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: 500;
+}
+
+.prodSlider__slider {
+  margin: 20px 80px;
+  padding: 25px;
+}
+
+.prodSlider__slider h4 a {
+  //background-color: #dedede;
+  display: block;
+  border-radius: 10px;
+  font-style: italic;
+  font-weight: 500;
+
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $rosa3;
+    text-decoration: underline;
+  }
+}
+@media (max-width: 790px) {
+  .prodSlider__slider {
+    margin: 20px 0px;
+  }
+  
+}
+

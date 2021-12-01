@@ -1,0 +1,70 @@
+.movilNav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+    background-color: #cb938c;
+    opacity: 0.5;
+    //visibility: hidden;
+  }
+  .movilNav__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    background-color: #fff;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    max-width: 31.25rem;
+    width: 100%;
+    padding: 5rem 2.5rem 3.75rem 2.5rem;
+    overflow-y: auto;
+    //-ms-transform: translateX(-100%);
+    //transform: translateX(-100%);
+    //transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+  .movilNav__main h2{
+      display: block;
+      text-align: center;
+      padding: .625rem;
+      width: 100%;
+    font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: .3125rem;
+      font-weight: 500;
+      //background-color: #cb938c;
+      border-bottom: 1px solid $rosa3;
+  }
+  .movilNav__menu{
+    margin-top: 1.25rem;
+    list-style: none;
+    height: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    
+  }
+  
+  
+  .movilNav__menu li a{
+    
+    text-decoration: none;
+    color: #000;
+    font-size: 1.25rem;
+    letter-spacing: .1875rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $rosa3;
+    }
+
+  }

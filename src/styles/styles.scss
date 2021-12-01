@@ -1,0 +1,25 @@
+
+@import './base/settings';
+@import './base/base';
+
+@import '/src/styles/componets/navbar';
+@import '/src/styles/componets/prod';
+@import '/src/styles/componets/detalle';
+@import '/src/styles/componets/slider';
+@import '/src/styles/componets/news';
+@import '/src/styles/componets/footer';
+@import '/src/styles/componets/carrusel';
+@import '/src/styles/componets/prodSlider';
+@import '/src/styles/componets/login';
+@import '/src/styles/componets/navbarSimple';
+@import '/src/styles/componets/movilNavbar';
+@import '/src/styles/componets/whastapp';
+@import '/src/styles/componets/construction';
+@import '/src/styles/componets/paginate';
+
+
+
+@import '/src/styles/pages/productosLista';
+@import '/src/styles/pages/carrito';
+@import '/src/styles/pages/miCuenta';
+@import '/src/styles/pages/loading';

@@ -1,0 +1,70 @@
+.news__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5%;
+ 
+  
+
+}
+.news__main form{
+  padding: 5px;
+}
+
+.news__main h3 {
+  font-family: "Didot", serif;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 36px;
+  letter-spacing: 4.76px;
+  line-height: 43.2px;
+  text-transform: uppercase;
+}
+.news__main p {
+  font-family: "Didot", serif;
+}
+.news__mail {
+  position: relative;
+  margin: 30 px auto 0.5 em;
+ width: 350px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.news__mail input {
+  
+  text-transform: lowercase;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  font-size: 1em;
+  background: 0 0;
+  text-align: left;
+  border: none;
+  border-bottom: thin solid;
+  width: 100%;
+  box-sizing: border-box;
+ 
+  appearance: none;
+  border-radius: 0;
+  outline:none;
+  
+}
+.news__mail button {
+  font-size: 16px;
+    background: transparent;
+  color: #cb938c;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0 0.5 em;
+  display: -ms-flexbox;
+  display: flex;
+  
+  align-items: center;
+  
+  justify-content: center;
+  border: none;
+  
+}

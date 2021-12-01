@@ -1,0 +1,94 @@
+.login__main{
+    height: 100vh;
+
+}
+.login__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96%;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+}
+.login__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    width: 500px;
+    border: 1px solid $rosa4;
+    border-radius: 10px;
+    padding: 30px;
+   //background-color: $rosa1;
+    
+    
+}
+.login__form h2{
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 5px;
+    
+}
+.login__form form input{
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    outline: none;
+    border: 1px solid #ccc;
+   
+}
+.login__form form button{
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    letter-spacing: 4px;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: $rosa4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    &:hover{
+        background-color: darken($color: $rosa4, $amount: 10);
+    }
+
+}
+.login__register{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+   
+    
+   
+}
+.login__register p{
+    color: rgb(136, 124, 124);
+    font-weight: 500;
+    font-style: italic;
+    flex: 1;
+}
+.login__register a{
+    text-decoration: none;
+    color: $rosa4;
+    //margin-left: 5px;
+    flex: 2;
+    
+    &:hover{
+        color: darken($color: $rosa4, $amount: 10);
+    }
+}
+.login__error{
+    position: absolute;
+    color: red;
+    font-size: 12px;
+    
+}
+.login__error-login{
+    color: red;
+    font-size: 12px;
+}

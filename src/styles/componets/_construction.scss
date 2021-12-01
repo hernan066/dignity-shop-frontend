@@ -1,0 +1,17 @@
+.construction__main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 5% 5% 5%;
+}
+.construction__img{
+    width: 50%;
+}
+.construction__img img{
+    width: 100%;
+}
+.construction__main a{
+    font-size: 20px;
+    letter-spacing: 2px;
+}

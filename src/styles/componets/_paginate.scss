@@ -1,0 +1,24 @@
+.paginate__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+}
+.paginate__btn_prev, 
+.paginate__btn_next, 
+.paginate__page{
+    border: 1px solid $rosa3;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover{
+         background-color: $rosa1; 
+         transform: scale(1.05);  
+    }
+}
+.paginate__active{
+    background-color: $rosa2;
+}
