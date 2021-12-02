@@ -4,10 +4,10 @@ import { Navigate } from 'react-router-dom';
 
 export const PrivateRoute = ({ children }) => {
 
-    const {login} = useSelector(state => state.auth)
+    const {currentUser} = useSelector(state => state.user)
     
 
-    return login
+    return currentUser
         ? children
         : <Navigate to="/" />
 }

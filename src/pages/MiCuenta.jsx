@@ -1,15 +1,16 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 
-import { starLogout } from "../actions/auth";
+
 import Navbar from "../components/Navbar";
+import { logout } from "../redux/userRedux";
 
 const MiCuenta = () => {
   
   const dispatch = useDispatch();
   
   const handleClick = () => {
-    dispatch(starLogout());
+    dispatch(logout());
     
   }
   

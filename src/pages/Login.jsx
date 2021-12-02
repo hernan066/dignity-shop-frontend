@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import {useDispatch} from "react-redux";
 import { starLogin } from "../actions/auth";
+import { login } from "../redux/apiCalls";
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Email invalido").required("Requerido"),
@@ -32,12 +33,13 @@ export const Login = () => {
           <h2>Login</h2>
 
           <Formik
-            initialValues={{ email: "", password: "" }}
+            initialValues={{ email: "hernan_066@hotmail.com", password: "1234567" }}
             validationSchema={SignupSchema}
             onSubmit={(values, { resetForm }) => {
               
               const { email, password } = values;
-              dispatch(starLogin(email, password));
+              //dispatch(starLogin(values));
+              login( dispatch, {email, password} );
 
               resetForm();
               

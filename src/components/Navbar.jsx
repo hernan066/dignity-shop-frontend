@@ -13,7 +13,7 @@ const Navbar = () => {
   
    const {hambugerMenu} = useSelector(state => state.ui)
   const {quantity} = useSelector(state => state.cart)
-  //const {uid} = useSelector(state => state.auth)
+  const {currentUser} = useSelector(state => state.user)
   
   const dispatch = useDispatch()
   
@@ -21,7 +21,7 @@ const Navbar = () => {
   const handleCloseMenu = () => dispatch(closeHambugerMenu()); 
   
   
-  const uid = null;
+  
   
   
   
@@ -63,7 +63,7 @@ const Navbar = () => {
         </div>
         <div className="nav__right">
           {
-            uid 
+            currentUser 
             ? (
               <Link to="/cuenta" className="nav__icon-login">
               <span>

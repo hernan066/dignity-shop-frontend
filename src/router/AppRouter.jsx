@@ -31,10 +31,13 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/producto/:id" element={<Detalle />} />
         <Route path="/carrito" element={<Carrito />} />
-        <Route path="/construction" element={<EnConstruccion />} />
         <Route path="/productos/:category" element={<ProductosLista />} />
+        <Route path="/construction" element={<EnConstruccion />} />
+       {/*  <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/cuenta" element={<MiCuenta />} /> */}
 
-        <Route path="/cuenta" element={
+         <Route path="/cuenta" element={
                     <PrivateRoute>
                         <MiCuenta />
                     </PrivateRoute>
@@ -50,7 +53,7 @@ const AppRouter = () => {
                     <PublicRoute>
                         <Register />
                     </PublicRoute>
-                 } />
+                 } /> 
                         
 
       </Routes>
