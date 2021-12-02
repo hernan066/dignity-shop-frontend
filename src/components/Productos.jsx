@@ -6,7 +6,7 @@ import Producto from "./Producto";
 
 
 const Productos = ({cat, filters, sort}) => {
-  console.log(cat, filters, sort)
+  //console.log(cat, filters, sort)
   
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -20,7 +20,7 @@ const Productos = ({cat, filters, sort}) => {
             : "https://dignity-shop.herokuapp.com/api/products"
         );
         setProducts(res.data);
-        console.log(res.data)
+        //console.log(res.data)
       } catch (err) {}
     };
     getProducts();

@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import { addProduct } from "../redux/cartRedux";
 
 import { publicRequest } from "../requestMethods";
+import { v4 as uuidv4 } from 'uuid';
 
 const Detalle = () => {
   
@@ -36,16 +37,13 @@ const Detalle = () => {
     }, [id]);  
 
   const handleClick = ()=>{
-    //update cart
-    //dispatch(addProduct([{product}, product.price]));
-
-    /* import { v4 as uuidv4 } from 'uuid';
-
-    uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed' */
     
+    //Se agrega un id aleatorio para que no se repitan los productos
+    const product_cart_id = uuidv4();
     
     dispatch(addProduct({
-      product: product,
+       
+      product: {product, product_cart_id},
       price: product.price
     }));
   }
