@@ -3,7 +3,9 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
-import { startRegister } from "../actions/auth";
+
+import { register } from "../redux/apiCalls";
+
 
 const SignupSchema = Yup.object().shape({
   username: Yup.string().required("Requerido"),
@@ -36,7 +38,8 @@ export const Register = () => {
             onSubmit={(values, { resetForm }) => {
               
                const { username,  email, password } = values;
-              dispatch(startRegister(username,  email, password)); 
+              //dispatch(register(username,  email, password)); 
+              register( dispatch, {username,  email, password} );
 
               resetForm();
               
