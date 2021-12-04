@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import {useDispatch} from "react-redux";
-import { starLogin } from "../actions/auth";
+
 import { login } from "../redux/apiCalls";
 
 const SignupSchema = Yup.object().shape({

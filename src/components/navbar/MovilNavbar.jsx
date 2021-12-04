@@ -1,7 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { closeHambugerMenu } from "../../actions/ui";
+import { closeHambugerMenu } from "../../redux/uiRedux";
+
 
 const MovilNavbar = () => {
   

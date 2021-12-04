@@ -1,8 +1,3 @@
-//Cambiar loginStart recibe email y password, luego login recibe uid y username
-
-
-
-
 import { loginFailure, loginStart, loginSuccess, registerFailure, registerStart, registerSuccess } from "./userRedux";
 import { publicRequest } from "../requestMethods";
 import Swal from "sweetalert2";
@@ -54,15 +49,10 @@ export const register = async (dispatch, user) => {
     dispatch(registerSuccess(res.data));
     console.log(res.data);
 
-   /*  dispatch(
-      login({
-        uid: res.data.uid,
-        username: res.data.username,
-      })
-    ); */
-    login( dispatch, {
-      uid:res.data.uid, 
-      username:res.data.username,} );
+    dispatch(loginSuccess(res.data));
+
+   
+    
 
     //////////////////Alerta de exito login////////////////////
     const Toast = Swal.mixin({
@@ -79,7 +69,7 @@ export const register = async (dispatch, user) => {
 
     Toast.fire({
       icon: "success",
-      title: "Ingresaste con exito",
+      title: "Te registraste con exito",
     });
     //////////////////////////////////////////////////////////
 
@@ -97,3 +87,4 @@ export const register = async (dispatch, user) => {
     //////////////////////////////////////////////////////////
   }
 };
+
