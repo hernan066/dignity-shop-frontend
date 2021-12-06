@@ -14,6 +14,7 @@ import Home from "../pages/Home";
 
 import { Login } from "../pages/Login";
 import MiCuenta from "../pages/MiCuenta";
+import OrdenCompra from "../pages/OrdenCompra";
 import ProductosLista from "../pages/ProductosLista";
 import { Register } from "../pages/Register";
 import { PrivateRoute } from "./PrivateRoute";
@@ -33,6 +34,7 @@ const AppRouter = () => {
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/productos/:category" element={<ProductosLista />} />
         <Route path="/construction" element={<EnConstruccion />} />
+        <Route path="/orden" element={<OrdenCompra />} />
        {/*  <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cuenta" element={<MiCuenta />} /> */}
