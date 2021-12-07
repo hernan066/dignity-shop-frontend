@@ -3,6 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import OrdenCompraProducto from "../components/carrito/OrdenCompraProducto";
 
 const SignupSchema = Yup.object().shape({
   nombre: Yup.string().required("Requerido"),
@@ -127,18 +128,7 @@ const OrdenCompra = () => {
           <h3>Resumen de compra</h3>
           {
               products.map(item => (
-                <div className="order__producto">
-                <div className="order__img">
-                  <img src={item.product.img} alt="desc" />
-                </div>
-                <div className="order__title">
-                  <h4>{item.product.title}</h4>
-                  <div className="order__price">
-                    <p>Cant: 1 </p>
-                    <p>${item.product.price}</p>
-                  </div>
-                </div>
-              </div>
+                <OrdenCompraProducto key={item.product_cart_id} item={item} />
               ))
           }
           
