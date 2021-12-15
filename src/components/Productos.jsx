@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 //import ReactPaginate from "react-paginate";
+import {BASE_URL} from "../requestMethods"
 
 import Producto from "./Producto";
 
@@ -16,8 +17,8 @@ const Productos = ({cat, filters, sort}) => {
       try {
         const res = await axios.get(
           cat
-            ? `https://dignity-shop.herokuapp.com/api/products?category=${cat}`
-            : "https://dignity-shop.herokuapp.com/api/products"
+            ? `${BASE_URL}products?category=${cat}`
+            : `${BASE_URL}products`
         );
         setProducts(res.data);
         //console.log(res.data)

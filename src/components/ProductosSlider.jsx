@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Glider from "react-glider";
 import "glider-js/glider.min.css";
 import { Link } from "react-router-dom";
-import { datos } from "../data/datos";
+
+import { getProducts } from "../redux/productsRedux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Contenido = ({ children, style, className }) => (
   <div className={`slide ${className}`} style={style}>
@@ -10,8 +12,19 @@ const Contenido = ({ children, style, className }) => (
   </div>
 );
 
+
+
+
+
+
 const ProductosSlider = () => {
   const gliderRef = React.useRef(null);
+  const dispatch = useDispatch();
+  const {products} = useSelector(state => state.products)
+
+  useEffect(() => {
+    getProducts(dispatch);
+  }, [dispatch]);
 
   return (
     <div className="prodSlider__main">
@@ -31,12 +44,12 @@ const ProductosSlider = () => {
             //console.log("onSlideVisible", context, event);
           }}
         >
-          {datos.map((data) => (
-            <Contenido key={data.id}>
+          {products.map((item) => (
+            <Contenido key={item._id}>
               <div className="carrusel__elemento">
-                <Link to={`/producto/${datos._id}`}><img src={data.imagen} alt={data.descripcion} /></Link>
-                <h3>{data.nombre}</h3>
-                <p>{data.precio}</p>
+                <Link to={`/producto/${item._id}`}><img src={item.img} alt={item.descripcion} /></Link>
+                <h3>{item.title}</h3>
+                <p>{item.price}</p>
               </div>
             </Contenido>
           ))}
