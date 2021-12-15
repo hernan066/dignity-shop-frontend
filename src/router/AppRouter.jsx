@@ -1,7 +1,7 @@
 import React from "react";
 
 import {
-    BrowserRouter,
+    HashRouter,
     Routes,
     Route,
   } from 'react-router-dom';
@@ -27,7 +27,7 @@ const AppRouter = () => {
   
   
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/producto/:id" element={<Detalle />} />
@@ -59,7 +59,7 @@ const AppRouter = () => {
                         
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
