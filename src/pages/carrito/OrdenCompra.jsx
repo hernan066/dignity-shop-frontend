@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-import OrdenCompraProducto from "../components/carrito/OrdenCompraProducto";
+import OrdenCompraProducto from "../../components/carrito/OrdenCompraProducto";
 
 const SignupSchema = Yup.object().shape({
   nombre: Yup.string().required("Requerido"),

@@ -7,18 +7,19 @@ import {
   } from 'react-router-dom';
 
 
-import Carrito from "../pages/Carrito";
+import Carrito from "../pages/carrito/Carrito";
 import Detalle from "../pages/Detalle";
 import EnConstruccion from "../pages/EnConstruccion";
 import Home from "../pages/Home";
 
 import { Login } from "../pages/Login";
 import MiCuenta from "../pages/MiCuenta";
-import OrdenCompra from "../pages/OrdenCompra";
+import OrdenCompra from "../pages/carrito/OrdenCompra";
 import ProductosLista from "../pages/ProductosLista";
 import { Register } from "../pages/Register";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
+import ConfirmaCompra from "../pages/carrito/ConfirmaCompra";
 
 
 
@@ -35,6 +36,7 @@ const AppRouter = () => {
         <Route path="/productos/:category" element={<ProductosLista />} />
         <Route path="/construction" element={<EnConstruccion />} />
         <Route path="/orden" element={<OrdenCompra />} />
+        <Route path="/confirma" element={<ConfirmaCompra />} />
        {/*  <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cuenta" element={<MiCuenta />} /> */}
