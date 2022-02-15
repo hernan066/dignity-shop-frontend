@@ -124,17 +124,17 @@ export const carruselImg = [
     },
     {
         id:'img2',
-        img: 'https://i.ibb.co/MR2QfqR/2021-11-25-04-18-42.png',
+        img: 'https://i.ibb.co/dkDxHzP/2021-11-25-04-22-02.png',
         alt:'ropa'    
     },
     {
         id:'img3',
-        img: 'https://i.ibb.co/vJbTF4K/2021-11-25-04-21-16.png',
+        img: 'https://i.ibb.co/dkDxHzP/2021-11-25-04-22-02.png',
         alt:'ropa'
     },
     {
         id:'img4',
-        img: 'https://i.ibb.co/F7mLTZ0/2021-11-25-04-19-56.png',
+        img: 'https://i.ibb.co/dkDxHzP/2021-11-25-04-22-02.png',
         alt:'ropa'
     },
     
