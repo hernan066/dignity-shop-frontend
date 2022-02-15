@@ -33,7 +33,7 @@ export const Login = () => {
           <h2>Login</h2>
 
           <Formik
-            initialValues={{ email: "hernan_066@hotmail.com", password: "1234567" }}
+            initialValues={{ email: "", password: "" }}
             validationSchema={SignupSchema}
             onSubmit={(values, { resetForm }) => {
               
