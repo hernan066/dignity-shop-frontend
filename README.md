@@ -12,7 +12,7 @@
 
 ### Live demo
 
-https://www.dignity-shop.com.ar/ </br>
+https://www.dignity-shop.com.ar/ </br></br>
 
 Nota: Este es un proyecto real que no se termino, porque el cliente no siguio con su negocio. Esta completo en un 80%.
 
